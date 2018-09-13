@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TicTacToe</title>
+<link rel="stylesheet" href="TicTacToe_Jerico_Lua.css">
+</head>
+<body>
+
+<h1>TicTacToe</h1>
+
+<div>
+	<button id="field0" class="GameButton" onclick="colorchange(this.id);"></button>
+	<button id="field1" class="GameButton" onclick="colorchange(this.id);"></button>
+	<button id="field2" class="GameButton" onclick="colorchange(this.id);"></button>
+</div>
+<div>
+	<button id="field3" class="GameButton" onclick="colorchange(this.id);"></button>
+	<button id="field4" class="GameButton" onclick="colorchange(this.id);"></button>
+	<button id="field5" class="GameButton" onclick="colorchange(this.id);"></button>
+</div>
+<div>
+	<button id="field6" class="GameButton" onclick="colorchange(this.id);"></button>
+	<button id="field7" class="GameButton" onclick="colorchange(this.id);"></button>
+	<button id="field8" class="GameButton" onclick="colorchange(this.id);"></button>
+</div>
+
+<p>Please choose a game mode:</p>
+
+<ul>
+	<li>
+		<input type="radio" id="inputPvP" name="gameTyp" checked="gametype();"> 
+		<label id="labelPvsP">Player 1 vs Player 2</label>
+		<ul>
+			<li>
+				<label id="emailfield1">Player 1:</label><input type="email" id="email1" placeholder="E-Mail address">
+                
+				<output class="MessageArea" id="mailerror1" ></output></li>
+			<li>
+				<label id="emailfield2">Player 2:</label><input type="email" id="email2" placeholder="E-Mail address" >
+                
+				<output class="MessageArea" id="mailerror2"></output>
+			</li>
+		</ul>
+	</li>
+    <li>
+		<input type="radio" id="inputPvC" name="gameTyp" checked="gametype();"> 
+		<label id="labelPvC">Player vs Computer</label>
+		<ul>
+			<li>
+				<label id="emailfield3">Player 1:</label><input type="email" id="email3" placeholder="E-Mail address">
+                
+				<output class="MessageArea" id="mailerror3" ></output></li>
+			<li>
+				<label id="computerfield1">Computer</label>
+			</li>
+		</ul>
+	</li>
+</ul>
+
+<div class="MessageArea" id="gamemessage" ></div>
+
+	<button id="resetbutton" onclick="reset();">reset</button>
+	<button id="startbutton" onclick="start();">start</button>
+
+<script src="TicTacToe_Jerico_Lua.js"></script>
+<script>init();</script>
+
+</body>
+</html>

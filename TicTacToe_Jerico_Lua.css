@@ -1,0 +1,32 @@
+.GameButton{
+	height: 45px;
+	width: 45px;
+    transition-duration: 0.7s;
+    border-radius:50%; margin: 8px;
+    box-shadow: 10px 10px 5px #999;
+}
+.GameButton:hover{
+    transform: translate(4px, 4px);
+    box-shadow: 7px 7px 5px #666;
+}
+.GameButtonRed{
+	background-color:red;
+    height: 45px;
+	width: 45px;
+ border-radius:50%;   transform: translate(4px, 4px);
+    box-shadow: 7px 7px 5px #666;
+    margin: 8px;
+    transition-duration: 0.7s;
+}
+.GameButtonGreen{
+	background-color:green;
+    height: 45px;
+	width: 45px;
+    border-radius:50%; transform: translate(4px, 4px);
+    box-shadow: 7px 7px 5px #666;
+    margin: 8px;
+
+    transition-duration: 0.7s;}
+.MessageArea{
+	color: red; font-size: 18px; font-weight: bold; line-height: 1.5em;
+}
