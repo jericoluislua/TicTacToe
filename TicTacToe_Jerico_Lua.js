@@ -2,6 +2,7 @@
 "strict mode";
 "use strict";
 var s = 1;
+var win = 0;
 
 //old regex = /^[a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[a-zA-Z2-3]$/;
 
@@ -220,12 +221,7 @@ function checkRowsRed() {
         disableBoard();
         resetbutton.disabled = false;
         startbutton.disabled = true;
-    } else if (f0.className !== 'GameButton' && f1.className !== 'GameButton' && f2.className !== 'GameButton' && f3.className !== 'GameButton' && f4.className !== 'GameButton' && f5.className !== 'GameButton' && f6.className !== 'GameButton' && f7.className !== 'GameButton' && f8.className !== 'GameButton') {
-        gamemessage.style.color = "black";
-        gamemessage.innerHTML = 'No player won. Please click reset.';
-        resetbutton.disabled = false;
-        startbutton.disabled = true;
-        console.log('Tie');
+        win = 1;
     }
 }
 function checkColumnsRed() {
@@ -240,12 +236,7 @@ function checkColumnsRed() {
         disableBoard();
         resetbutton.disabled = false;
         startbutton.disabled = true;
-    } else if (f0.className !== 'GameButton' && f1.className !== 'GameButton' && f2.className !== 'GameButton' && f3.className !== 'GameButton' && f4.className !== 'GameButton' && f5.className !== 'GameButton' && f6.className !== 'GameButton' && f7.className !== 'GameButton' && f8.className !== 'GameButton') {
-        gamemessage.style.color = "black";
-        gamemessage.innerHTML = 'No player won. Please click reset.';
-        resetbutton.disabled = false;
-        startbutton.disabled = true;
-        console.log('Tie');
+        win = 1;
     }
 }
 function checkDiagonalsRed() {
@@ -259,12 +250,7 @@ function checkDiagonalsRed() {
         disableBoard();
         resetbutton.disabled = false;
         startbutton.disabled = true;
-    } else if (f0.className !== 'GameButton' && f1.className !== 'GameButton' && f2.className !== 'GameButton' && f3.className !== 'GameButton' && f4.className !== 'GameButton' && f5.className !== 'GameButton' && f6.className !== 'GameButton' && f7.className !== 'GameButton' && f8.className !== 'GameButton') {
-        gamemessage.style.color = "black";
-        gamemessage.innerHTML = 'No player won. Please click reset.';
-        resetbutton.disabled = false;
-        startbutton.disabled = true;
-        console.log('Tie');
+        win = 1;
     }
 }
 function checkAllRed() {
@@ -272,6 +258,8 @@ function checkAllRed() {
     checkColumnsRed();
     checkDiagonalsRed();
 }
+
+
 
 function checkRowsGreen() {
     //first if: first row all green = player 1 wins
@@ -284,12 +272,7 @@ function checkRowsGreen() {
         disableBoard();
         resetbutton.disabled = false;
         startbutton.disabled = true;
-    } else if (f0.className !== 'GameButton' && f1.className !== 'GameButton' && f2.className !== 'GameButton' && f3.className !== 'GameButton' && f4.className !== 'GameButton' && f5.className !== 'GameButton' && f6.className !== 'GameButton' && f7.className !== 'GameButton' && f8.className !== 'GameButton') {
-        gamemessage.style.color = "black";
-        gamemessage.innerHTML = 'No player won. Please click reset.';
-        resetbutton.disabled = false;
-        startbutton.disabled = true;
-        console.log('Tie');
+        win = 1;
     }
 }
 function checkColumnsGreen() {
@@ -303,12 +286,7 @@ function checkColumnsGreen() {
         disableBoard();
         resetbutton.disabled = false;
         startbutton.disabled = true;
-    } else if (f0.className !== 'GameButton' && f1.className !== 'GameButton' && f2.className !== 'GameButton' && f3.className !== 'GameButton' && f4.className !== 'GameButton' && f5.className !== 'GameButton' && f6.className !== 'GameButton' && f7.className !== 'GameButton' && f8.className !== 'GameButton') {
-        gamemessage.style.color = "black";
-        gamemessage.innerHTML = 'No player won. Please click reset.';
-        resetbutton.disabled = false;
-        startbutton.disabled = true;
-        console.log('Tie');
+        win = 1;
     }
 }
 function checkDiagonalsGreen() {
@@ -321,18 +299,24 @@ function checkDiagonalsGreen() {
         disableBoard();
         resetbutton.disabled = false;
         startbutton.disabled = true;
-    } else if (f0.className !== 'GameButton' && f1.className !== 'GameButton' && f2.className !== 'GameButton' && f3.className !== 'GameButton' && f4.className !== 'GameButton' && f5.className !== 'GameButton' && f6.className !== 'GameButton' && f7.className !== 'GameButton' && f8.className !== 'GameButton') {
-        gamemessage.style.color = "black";
-        gamemessage.innerHTML = 'No player won. Please click reset.';
-        resetbutton.disabled = false;
-        startbutton.disabled = true;
-        console.log('Tie');
+        win = 1;
     }
 }
 function checkAllGreen() {
     checkRowsGreen();
     checkColumnsGreen();
     checkDiagonalsGreen();
+}
+
+function checkTie() {
+    if ((f0.className !== 'GameButton' && f1.className !== 'GameButton' && f2.className !== 'GameButton' && f3.className !== 'GameButton' && f4.className !== 'GameButton' && f5.className !== 'GameButton' && f6.className !== 'GameButton' && f7.className !== 'GameButton' && f8.className !== 'GameButton') && (win === 0)) {
+        gamemessage.style.color = "black";
+        gamemessage.innerHTML = 'No player won. Please click reset.';
+        resetbutton.disabled = false;
+        startbutton.disabled = true;
+        tie = 1;
+        console.log('Tie');
+    }
 }
 
 function colorchange(button) {
