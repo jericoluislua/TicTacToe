@@ -332,6 +332,7 @@ function colorchange(button) {
             console.log('Button no longer changeable');
             
             checkAllRed();
+	    checkTie();
         }
     } else if (s === 0) {
         console.log('Button turns green');
@@ -345,6 +346,7 @@ function colorchange(button) {
             console.log("Button can't be changed if color(red/green)");
             
             checkAllGreen();
+	    checkTie();
         }
     }
 }
