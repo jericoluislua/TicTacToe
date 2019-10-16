@@ -99,7 +99,7 @@ function emailValid() {
     
     if (inputPvP.checked == true) {
         
-        errormail3.innerHTML = "";
+        //errormail3.innerHTML = "";
         
         
         //if: regex.test(mailvalue1) is false = "no email"
