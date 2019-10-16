@@ -95,7 +95,7 @@ function emailValid() {
     //mail textbox value
     var mailvalue1 = mail1.value;
     var mailvalue2 = mail2.value;
-    var mailvalue3 = mail3.value;
+    //var mailvalue3 = mail3.value;
     
     if (inputPvP.checked == true) {
         
@@ -157,7 +157,7 @@ function emailValid() {
         }
         
         
-    } else if (inputPvC.checked === true) {
+    }/* else if (inputPvC.checked === true) {
         
         errormail1.innerHTML = "";
         errormail2.innerHTML = "";
@@ -184,7 +184,7 @@ function emailValid() {
             //player cannot click reset nor start while playing
             disableBoard();
         }
-    }
+    }*/
 }
 function start() {
     resetbutton.disabled = true;
