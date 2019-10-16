@@ -23,7 +23,7 @@ var f8 = document.getElementById("field8");
 //mailfield
 var mail1 = document.getElementById("email1");
 var mail2 = document.getElementById("email2");
-var mail3 = document.getElementById("email3");
+//var mail3 = document.getElementById("email3");
 
 
 //start button
